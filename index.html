@@ -4,35 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Monedas
-    </title>
+    <title>Conversor de Monedas</title>
+    <link rel="preload" href="./styles.css" as="style">
+    <link href="./styles.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-    <div>
-        <label for="moneda">Pesos CLP</label>
-        <input type="number" id="number" min="0">
-        <br>
-        <br>
-    </div>
+    <div class="main_box">
+        <div class="caja_convertidor">
+            <div class="peso_clp">
+                <label for="cantidad">Pesos CLP</label>
+                <input type="number" id="cantidad" min="0">
+            </div>
 
-    <div>
-        <label for="divisa">Moneda a convertir:</label>
+            <div class="divisas">
+                <label for="divisa">Moneda a convertir:</label>
+                <select id="divisa">
+                    <option value="dolar">Dólar</option>
+                    <option value="euro">Euro</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <button onclick="convertir()">Buscar</button>
+            </div>
+            <div>
+                <p id="resultado">Resultado</p>
+            </div>
+        </div>
 
-        <select id="divisa">
-            <option value="">Por favor, seleccione una divisa</option>
-            <option value="dolar">Dolar</option>
-            <option value="euro">Euro</option>
-            <option value="libra">Libra</option>
-        </select>
+        <div class="graficas">
+            <!-- Grafica para DOLAR -->
+            <h2>Valor del Dólar - Últimos 10 Días</h2>
+            <canvas id="myChart" width="100" height="50"></canvas>
+
+            <!-- Grafica para EURO -->
+            <h2>Valor del Euro - Últimos 10 Días</h2>
+            <canvas id="myChart2" width="100" height="50"></canvas>
+        </div>
     </div>
-    <br>
-    <div>
-        <input type="submit" value="Enviar">
-    </div>
-    <div>
-        <p>Resultado</p>
-    </div>
+    <script src="./index.js"></script>
 </body>
 
 </html>

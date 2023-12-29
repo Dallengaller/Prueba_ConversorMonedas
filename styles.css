@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_box {
+    background-color: black;
+    height: 100vh;
+}
+
+.caja_convertidor {
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 20px 50px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(110, 116, 127);
+}
+
+.peso_clp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+
+}
+
+.divisas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.graficas {
+    border: 1px solid black;
+    background-color: white;
+    width: 600px;
+    margin: 20px auto 0px auto;
+    text-align: center;
+}
+
+button {
+    background-color: rgba(0, 230, 230, 0.574);
+    color: white;
+    border-style: none;
+    padding: 5px;
+    width: 100px;
+    border: 1px solid rgb(18, 0, 154);
+}
