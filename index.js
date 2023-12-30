@@ -1,3 +1,4 @@
+// Conversor
 async function obtenerTasaDeCambio(divisa) {
     const res = await fetch("https://mindicador.cl/api/");
     const data = await res.json();
@@ -31,26 +32,25 @@ async function convertir() {
 }
 
 // Graficas Dolar
-
 document.addEventListener("DOMContentLoaded", function () {
-    // URL de la API
+   
     const apiUrl = "https://mindicador.cl/api/dolar/";
 
-    // Obtener el contexto del lienzo
+    
     const ctx = document.getElementById("myChart").getContext("2d");
 
-    // Realizar la solicitud a la API
+    
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            // Obtener la información relevante (valores del dólar de los últimos 10 días)
+       
             const valoresDolar = data.serie.slice(0, 10);
 
-            // Extraer fechas y valores para el gráfico
+            
             const fechas = valoresDolar.map(valor => valor.fecha.substr(0, 10));
             const valores = valoresDolar.map(valor => valor.valor);
 
-            // Crear el gráfico
+            
             new Chart(ctx, {
                 type: 'line',
                 data: {
@@ -129,6 +129,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 
-    // Configurar el gráfico inicial
+  
     actualizarGrafico();
 });

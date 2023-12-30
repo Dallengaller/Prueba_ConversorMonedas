@@ -9,6 +9,15 @@
     height: 100vh;
 }
 
+h1 {
+    color: white;
+    text-align: center;
+    margin: 7px 0;
+}
+.cantidad {
+    text-align: center;
+}
+
 .caja_convertidor {
     margin: 0 auto;
     border: 1px solid black;
